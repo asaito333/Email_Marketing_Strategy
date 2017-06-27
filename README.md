@@ -63,4 +63,18 @@ For consumers, there were significant treatment effect (A-B and C-D) on opting o
 
 ### 2. How to affect on opting-out decision?
 
+I focused on optimizing number of emails by marketing type for each cardmember type to minimize the opting out decision.
+
+```SAS
+proc logistic data =arec559.contact_con_charge DESCENDING;
+title 'con charge';
+  model d_email_in_out = num_contacts num_contacts_sq num_contacts_cu &demog_vbls;
+run;
+```
+
+#### Results
+
+By including square and cubic forms, we obtained a nonlinear relationship of the number of contancts and the change in probability of opting out. The harmless number of contacts are show in the graph. For business customers, it is under once a week and for consumer customers, it is between once to twice a week.
+
+![slide1](https://user-images.githubusercontent.com/29264214/27614294-8e0d7c1c-5b55-11e7-8a87-9d918e9c94ba.jpg)
 
