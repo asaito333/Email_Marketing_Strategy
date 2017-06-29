@@ -63,7 +63,7 @@ For consumers, there were significant treatment effect (A-B and C-D) on opting o
 
 ### 2. How to affect on opting-out decision?
 
-I focused on optimizing number of emails by marketing type for each cardmember type to minimize the opting out decision.
+I focused on optimizing the number of emails by card type to minimize the probability of opting out decision.
 
 ```SAS
 proc logistic data =arec559.contact_con_charge DESCENDING;
