@@ -46,7 +46,7 @@ Match the propensity score between treatment (people who made choice to opt out)
 %PSMatching(datatreatment = PS_charge_con_treatment, datacontrol = PS_charge_con_control, method = NN, 
 	numberofcontrols = 1, caliper = , replacement = yes, out = matches);
   ```
-#### Difference in difference
+#### Difference in difference model
 After combining the treatment and control in one dataset, run differece-in-difference model to evaluate the treatment effect of opting out from email marketing. (time and choice are dummy variales, interaction = time * choice )
 
 ```SAS
